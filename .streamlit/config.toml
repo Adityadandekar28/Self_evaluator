@@ -2,26 +2,10 @@
 # ------------------------------------------------------------
 # Modern Production Web SaaS Theme
 
-[server]
-maxUploadSize = 200
-enableXsrfProtection = true
-enableCORS = false
-headless = true
-
-[browser]
-gatherUsageStats = false
-
-[client]
-toolbarMode = "minimal"
-showErrorDetails = false
-
-[ui]
-hideTopBar = true
-
 [theme]
 base = "dark"
 primaryColor = "#6366F1"
 backgroundColor = "#0B0F19"
 secondaryBackgroundColor = "#131B2E"
 textColor = "#F1F5F9"
-font = "sans serif"
+font = "sans-serif"
