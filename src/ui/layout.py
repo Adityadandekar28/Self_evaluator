@@ -12,19 +12,15 @@ _CHROME_CSS = """
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
 
-/* Completely hide all Streamlit developer chrome, deploy button, status & hamburger */
-#MainMenu {visibility: hidden !important; display: none !important;}
-footer {visibility: hidden !important; display: none !important;}
-header {visibility: hidden !important; display: none !important;}
-[data-testid="stHeader"] {visibility: hidden !important; display: none !important;}
-[data-testid="stToolbar"] {visibility: hidden !important; display: none !important;}
-[data-testid="stDecoration"] {visibility: hidden !important; display: none !important;}
-[data-testid="stStatusWidget"] {visibility: hidden !important; display: none !important;}
+/* Clean modern chrome while preserving Streamlit Cloud lifecycle & status */
+footer {visibility: hidden !important;}
 .stDeployButton {display: none !important;}
 #stDecoration {display: none !important;}
 button[title="View fullscreen"] {display: none !important;}
 .viewerBadge_container__1QSob {display: none !important;}
-[data-testid="collapsedControl"] {top: 1rem !important; left: 1rem !important;}
+header[data-testid="stHeader"] {
+    background: transparent !important;
+}
 
 /* Clean page container spacing */
 .block-container {
