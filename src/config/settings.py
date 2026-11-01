@@ -94,3 +94,17 @@ MODULES: list[dict[str, str]] = [
 def get_module(key: str) -> dict[str, str] | None:
     """Return the module descriptor for ``key`` or ``None``."""
     return next((m for m in MODULES if m["key"] == key), None)
+
+
+# Fallback entrypoint if Streamlit Cloud is configured with main module: src/config/settings.py
+if __name__ == "__main__":
+    import sys
+    from pathlib import Path
+
+    _root = Path(__file__).resolve().parent.parent.parent
+    if str(_root) not in sys.path:
+        sys.path.insert(0, str(_root))
+
+    import app
+    app.main()
+
